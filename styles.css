@@ -1,0 +1,141 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundShift 10s infinite alternate ease-in-out;
+  }
+  
+  .container {
+    text-align: center;
+    position: relative;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    max-width: 600px;
+    position: relative;
+    animation: fadeInCard 2s ease-out, bounce 4s infinite alternate;
+    overflow: hidden;
+  }
+  
+  .card h1 {
+    font-size: 2.5rem;
+    color: #6a11cb;
+    animation: textGlow 1.5s infinite alternate;
+  }
+  
+  .card p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+  }
+  
+  .card .signature {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #8e44ad;
+    font-style: italic;
+    opacity: 0;
+    animation: fadeInText 2s 1.5s forwards;
+  }
+  
+  /* Floating Stars */
+  .floating-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    opacity: 0.8;
+    animation: float 6s infinite ease-in-out, twinkle 2s infinite alternate;
+  }
+  
+  .star:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(2) {
+    top: 30%;
+    left: 50%;
+    animation-delay: 1s;
+  }
+  
+  .star:nth-child(3) {
+    top: 70%;
+    left: 70%;
+    animation-delay: 2s;
+  }
+  
+  .star:nth-child(4) {
+    top: 40%;
+    left: 80%;
+    animation-delay: 3s;
+  }
+  
+  .star:nth-child(5) {
+    top: 60%;
+    left: 30%;
+    animation-delay: 4s;
+  }
+  
+  /* Animations */
+  @keyframes backgroundShift {
+    0% { background: linear-gradient(45deg, #6a11cb, #2575fc); }
+    100% { background: linear-gradient(45deg, #ff758c, #ff7eb3); }
+  }
+  
+  @keyframes fadeInCard {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes textGlow {
+    0% { text-shadow: 0 0 10px #ff758c, 0 0 20px #ff7eb3; }
+    100% { text-shadow: 0 0 20px #ff758c, 0 0 40px #ff7eb3; }
+  }
+  
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+  }
+  
+  @keyframes twinkle {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+  }
+  
