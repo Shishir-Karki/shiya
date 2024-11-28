@@ -139,3 +139,56 @@ body {
     100% { opacity: 1; }
   }
   
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .card {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .card h1 {
+      font-size: 2rem;
+    }
+  
+    .card p {
+      font-size: 1rem;
+    }
+  
+    .card .signature {
+      font-size: 0.9rem;
+    }
+  
+    .floating-stars .star {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    }
+  
+    .card {
+      padding: 15px;
+      max-width: 95%;
+    }
+  
+    .card h1 {
+      font-size: 1.8rem;
+    }
+  
+    .card p {
+      font-size: 0.9rem;
+    }
+  
+    .card .signature {
+      font-size: 0.8rem;
+    }
+  
+    .floating-stars .star {
+      width: 6px;
+      height: 6px;
+    }
+  }
+  
